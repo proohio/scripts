@@ -9,54 +9,54 @@ end
 local themeStyles = {
 	Binary = {
 		Primary       = Color3.fromRGB(0, 170, 255),
-		PrimaryDim    = Color3.fromRGB(0, 100, 180),
-		PrimaryGlow   = Color3.fromRGB(80, 205, 255),
+		PrimaryDim    = Color3.fromRGB(0, 100, 185),
+		PrimaryGlow   = Color3.fromRGB(90, 210, 255),
 		Background    = Color3.fromRGB(0, 0, 0),
-		Surface       = Color3.fromRGB(8, 10, 14),
-		Card          = Color3.fromRGB(12, 15, 20),
-		CardHover     = Color3.fromRGB(16, 20, 28),
-		Sidebar       = Color3.fromRGB(6, 7, 10),
-		Header        = Color3.fromRGB(4, 5, 8),
+		Surface       = Color3.fromRGB(10, 12, 18),
+		Card          = Color3.fromRGB(14, 17, 25),
+		CardHover     = Color3.fromRGB(19, 23, 34),
+		Sidebar       = Color3.fromRGB(7, 9, 14),
+		Header        = Color3.fromRGB(0, 0, 0),
 		Border        = Color3.fromRGB(0, 145, 215),
-		BorderDim     = Color3.fromRGB(22, 32, 48),
+		BorderDim     = Color3.fromRGB(20, 30, 48),
 		TextPrimary   = Color3.fromRGB(205, 228, 255),
-		TextSecondary = Color3.fromRGB(75, 110, 155),
+		TextSecondary = Color3.fromRGB(75, 110, 158),
 		TextAccent    = Color3.fromRGB(0, 180, 255),
-		TabInactive   = Color3.fromRGB(65, 95, 135),
+		TabInactive   = Color3.fromRGB(60, 90, 130),
 	},
 	Midnight = {
-		Primary       = Color3.fromRGB(140, 80, 255),
-		PrimaryDim    = Color3.fromRGB(90, 45, 185),
-		PrimaryGlow   = Color3.fromRGB(180, 125, 255),
+		Primary       = Color3.fromRGB(138, 80, 255),
+		PrimaryDim    = Color3.fromRGB(88, 45, 185),
+		PrimaryGlow   = Color3.fromRGB(178, 125, 255),
 		Background    = Color3.fromRGB(0, 0, 0),
-		Surface       = Color3.fromRGB(9, 8, 14),
-		Card          = Color3.fromRGB(13, 11, 20),
-		CardHover     = Color3.fromRGB(18, 15, 28),
-		Sidebar       = Color3.fromRGB(6, 5, 10),
-		Header        = Color3.fromRGB(4, 3, 8),
-		Border        = Color3.fromRGB(115, 60, 225),
-		BorderDim     = Color3.fromRGB(30, 18, 55),
-		TextPrimary   = Color3.fromRGB(222, 212, 255),
-		TextSecondary = Color3.fromRGB(95, 75, 150),
-		TextAccent    = Color3.fromRGB(160, 100, 255),
-		TabInactive   = Color3.fromRGB(85, 65, 140),
+		Surface       = Color3.fromRGB(10, 9, 16),
+		Card          = Color3.fromRGB(14, 12, 22),
+		CardHover     = Color3.fromRGB(19, 16, 30),
+		Sidebar       = Color3.fromRGB(7, 6, 12),
+		Header        = Color3.fromRGB(0, 0, 0),
+		Border        = Color3.fromRGB(112, 58, 225),
+		BorderDim     = Color3.fromRGB(28, 16, 52),
+		TextPrimary   = Color3.fromRGB(220, 210, 255),
+		TextSecondary = Color3.fromRGB(92, 72, 148),
+		TextAccent    = Color3.fromRGB(158, 98, 255),
+		TabInactive   = Color3.fromRGB(82, 62, 138),
 	},
 	Ember = {
-		Primary       = Color3.fromRGB(255, 85, 25),
+		Primary       = Color3.fromRGB(255, 84, 24),
 		PrimaryDim    = Color3.fromRGB(185, 50, 8),
-		PrimaryGlow   = Color3.fromRGB(255, 135, 65),
+		PrimaryGlow   = Color3.fromRGB(255, 134, 64),
 		Background    = Color3.fromRGB(0, 0, 0),
-		Surface       = Color3.fromRGB(12, 7, 5),
-		Card          = Color3.fromRGB(18, 11, 8),
-		CardHover     = Color3.fromRGB(24, 15, 10),
-		Sidebar       = Color3.fromRGB(8, 5, 3),
-		Header        = Color3.fromRGB(5, 3, 2),
-		Border        = Color3.fromRGB(205, 72, 15),
-		BorderDim     = Color3.fromRGB(45, 18, 8),
-		TextPrimary   = Color3.fromRGB(255, 230, 212),
-		TextSecondary = Color3.fromRGB(155, 90, 68),
-		TextAccent    = Color3.fromRGB(255, 112, 42),
-		TabInactive   = Color3.fromRGB(130, 72, 50),
+		Surface       = Color3.fromRGB(14, 9, 7),
+		Card          = Color3.fromRGB(19, 12, 9),
+		CardHover     = Color3.fromRGB(25, 16, 12),
+		Sidebar       = Color3.fromRGB(9, 6, 4),
+		Header        = Color3.fromRGB(0, 0, 0),
+		Border        = Color3.fromRGB(205, 70, 14),
+		BorderDim     = Color3.fromRGB(44, 17, 7),
+		TextPrimary   = Color3.fromRGB(255, 230, 210),
+		TextSecondary = Color3.fromRGB(152, 88, 66),
+		TextAccent    = Color3.fromRGB(255, 110, 40),
+		TabInactive   = Color3.fromRGB(128, 70, 48),
 	},
 }
 local function EnableDragging(handle, target)
@@ -99,6 +99,7 @@ function BinaryUI.CreateLib(libraryName, themeList)
 	ScreenGui.Parent = game.CoreGui
 	ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 	ScreenGui.ResetOnSpawn = false
+	-- ── Main window ────────────────────────────────────────────────
 	local Main = Instance.new("Frame")
 	Main.Name = "Main"
 	Main.Parent = ScreenGui
@@ -113,75 +114,86 @@ function BinaryUI.CreateLib(libraryName, themeList)
 	local MainStroke = Instance.new("UIStroke")
 	MainStroke.Color = themeList.Border
 	MainStroke.Thickness = 1
-	MainStroke.Transparency = 0.5
-	MainStroke.Parent = Main
-	Main.BackgroundTransparency = 1
 	MainStroke.Transparency = 1
-	Main.Position = UDim2.new(0.5, -330, 0.5, -220)
-	Tween(Main, {BackgroundTransparency = 0, Position = UDim2.new(0.5, -330, 0.5, -230)}, 0.35, Enum.EasingStyle.Quint)
-	delay(0.04, function() Tween(MainStroke, {Transparency = 0.5}, 0.35) end)
-	-- Header
+	MainStroke.Parent = Main
+	-- Entrance animation: slide up + fade in + glow appears
+	Main.BackgroundTransparency = 1
+	Main.Position = UDim2.new(0.5, -330, 0.5, -215)
+	Tween(Main, {BackgroundTransparency = 0, Position = UDim2.new(0.5, -330, 0.5, -230)}, 0.4, Enum.EasingStyle.Quint)
+	delay(0.1, function() Tween(MainStroke, {Transparency = 0.5}, 0.5) end)
+	-- ── Header ─────────────────────────────────────────────────────
 	local Header = Instance.new("Frame")
 	Header.Name = "Header"
 	Header.Parent = Main
 	Header.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 	Header.BorderSizePixel = 0
-	Header.Size = UDim2.new(1, 0, 0, 46)
+	Header.Size = UDim2.new(1, 0, 0, 48)
 	Header.ZIndex = 10
-	local HeaderLine = Instance.new("Frame")
-	HeaderLine.Parent = Header
-	HeaderLine.BackgroundColor3 = themeList.Border
-	HeaderLine.BackgroundTransparency = 0.4
-	HeaderLine.BorderSizePixel = 0
-	HeaderLine.Position = UDim2.new(0, 0, 1, -1)
-	HeaderLine.Size = UDim2.new(1, 0, 0, 1)
-	HeaderLine.ZIndex = 11
+	-- Bottom accent line on header
+	local HeaderAccent = Instance.new("Frame")
+	HeaderAccent.Parent = Header
+	HeaderAccent.BackgroundColor3 = themeList.Primary
+	HeaderAccent.BackgroundTransparency = 0.6
+	HeaderAccent.BorderSizePixel = 0
+	HeaderAccent.Position = UDim2.new(0, 0, 1, -1)
+	HeaderAccent.Size = UDim2.new(1, 0, 0, 1)
+	HeaderAccent.ZIndex = 11
 	EnableDragging(Header, Main)
-	local LogoBg = Instance.new("Frame")
-	LogoBg.Parent = Header
-	LogoBg.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-	LogoBg.BorderSizePixel = 0
-	LogoBg.Position = UDim2.new(0, 14, 0.5, -11)
-	LogoBg.Size = UDim2.new(0, 22, 0, 22)
-	LogoBg.ZIndex = 12
-	local LogoCorner = Instance.new("UICorner")
-	LogoCorner.CornerRadius = UDim.new(0, 4)
-	LogoCorner.Parent = LogoBg
-	local LogoStroke = Instance.new("UIStroke")
-	LogoStroke.Color = themeList.Border
-	LogoStroke.Thickness = 1
-	LogoStroke.Transparency = 0.5
-	LogoStroke.Parent = LogoBg
+	-- Logo: plain image, black bg, NO stroke
 	local LogoImg = Instance.new("ImageLabel")
-	LogoImg.Parent = LogoBg
+	LogoImg.Parent = Header
 	LogoImg.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 	LogoImg.BackgroundTransparency = 0
 	LogoImg.BorderSizePixel = 0
-	LogoImg.Size = UDim2.new(1, 0, 1, 0)
+	LogoImg.Position = UDim2.new(0, 14, 0.5, -12)
+	LogoImg.Size = UDim2.new(0, 24, 0, 24)
 	LogoImg.Image = "rbxassetid://75637976565211"
 	LogoImg.ImageColor3 = themeList.Primary
-	LogoImg.ZIndex = 13
+	LogoImg.ZIndex = 12
+	-- Logo pulse glow
 	coroutine.wrap(function()
 		while true do
-			Tween(LogoImg, {ImageColor3 = themeList.PrimaryGlow}, 1.8, Enum.EasingStyle.Sine)
-			wait(1.8)
-			Tween(LogoImg, {ImageColor3 = themeList.Primary}, 1.8, Enum.EasingStyle.Sine)
-			wait(1.8)
+			Tween(LogoImg, {ImageColor3 = themeList.PrimaryGlow}, 2, Enum.EasingStyle.Sine)
+			wait(2)
+			Tween(LogoImg, {ImageColor3 = themeList.Primary}, 2, Enum.EasingStyle.Sine)
+			wait(2)
 		end
 	end)()
+	-- Title
 	local TitleLabel = Instance.new("TextLabel")
 	TitleLabel.Parent = Header
 	TitleLabel.BackgroundTransparency = 1
-	TitleLabel.Position = UDim2.new(0, 44, 0, 0)
-	TitleLabel.Size = UDim2.new(1, -160, 1, 0)
+	TitleLabel.Position = UDim2.new(0, 46, 0, 0)
+	TitleLabel.Size = UDim2.new(1, -280, 1, 0)
 	TitleLabel.Font = Enum.Font.GothamBold
 	TitleLabel.Text = libraryName
 	TitleLabel.TextColor3 = themeList.TextPrimary
 	TitleLabel.TextSize = 14
 	TitleLabel.TextXAlignment = Enum.TextXAlignment.Left
 	TitleLabel.ZIndex = 11
-	-- Window buttons — using ImageLabel X instead of text for close
-	local function MakeCtrlBtn(xOff, hoverBg)
+	-- Mascot in header, right side, floated to the right of title
+	local MascotImg = Instance.new("ImageLabel")
+	MascotImg.Parent = Header
+	MascotImg.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+	MascotImg.BackgroundTransparency = 0
+	MascotImg.BorderSizePixel = 0
+	MascotImg.Position = UDim2.new(1, -180, 0.5, -22)
+	MascotImg.Size = UDim2.new(0, 44, 0, 44)
+	MascotImg.Image = "rbxassetid://125348433159932"
+	MascotImg.ScaleType = Enum.ScaleType.Fit
+	MascotImg.ZIndex = 12
+	MascotImg.ImageTransparency = 0.1
+	-- Mascot idle float animation
+	coroutine.wrap(function()
+		while true do
+			Tween(MascotImg, {Position = UDim2.new(1, -180, 0.5, -25)}, 1.2, Enum.EasingStyle.Sine)
+			wait(1.2)
+			Tween(MascotImg, {Position = UDim2.new(1, -180, 0.5, -19)}, 1.2, Enum.EasingStyle.Sine)
+			wait(1.2)
+		end
+	end)()
+	-- Window control buttons (frames for X, line for minimize)
+	local function MakeCtrlBtn(xOff, hoverColor)
 		local Btn = Instance.new("TextButton")
 		Btn.Parent = Header
 		Btn.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
@@ -189,7 +201,6 @@ function BinaryUI.CreateLib(libraryName, themeList)
 		Btn.BorderSizePixel = 0
 		Btn.Position = UDim2.new(1, xOff, 0.5, -10)
 		Btn.Size = UDim2.new(0, 26, 0, 20)
-		Btn.Font = Enum.Font.GothamBold
 		Btn.Text = ""
 		Btn.AutoButtonColor = false
 		Btn.ZIndex = 12
@@ -201,8 +212,8 @@ function BinaryUI.CreateLib(libraryName, themeList)
 		BS.Thickness = 1
 		BS.Parent = Btn
 		Btn.MouseEnter:Connect(function()
-			Tween(Btn, {BackgroundColor3 = hoverBg}, 0.12)
-			Tween(BS, {Color = themeList.Border, Transparency = 0.4}, 0.12)
+			Tween(Btn, {BackgroundColor3 = hoverColor}, 0.12)
+			Tween(BS, {Color = themeList.Border, Transparency = 0.5}, 0.12)
 		end)
 		Btn.MouseLeave:Connect(function()
 			Tween(Btn, {BackgroundColor3 = Color3.fromRGB(0, 0, 0)}, 0.12)
@@ -211,70 +222,82 @@ function BinaryUI.CreateLib(libraryName, themeList)
 		return Btn
 	end
 	local minimized = false
-	local MinBtn = MakeCtrlBtn(-62, Color3.fromRGB(20, 25, 35))
+	local MinBtn = MakeCtrlBtn(-60, Color3.fromRGB(18, 24, 36))
+	-- Minus icon: one horizontal frame
 	local MinLine = Instance.new("Frame")
 	MinLine.Parent = MinBtn
 	MinLine.BackgroundColor3 = themeList.TextSecondary
 	MinLine.BorderSizePixel = 0
-	MinLine.Position = UDim2.new(0.5, -6, 0.5, 0)
-	MinLine.Size = UDim2.new(0, 12, 0, 1)
+	MinLine.AnchorPoint = Vector2.new(0.5, 0.5)
+	MinLine.Position = UDim2.new(0.5, 0, 0.5, 0)
+	MinLine.Size = UDim2.new(0, 11, 0, 1)
 	MinLine.ZIndex = 13
+	local MLC = Instance.new("UICorner")
+	MLC.CornerRadius = UDim.new(1, 0)
+	MLC.Parent = MinLine
 	MinBtn.MouseButton1Click:Connect(function()
 		minimized = not minimized
 		if minimized then
-			Tween(Main, {Size = UDim2.new(0, 660, 0, 46)}, 0.28, Enum.EasingStyle.Quart)
+			Tween(Main, {Size = UDim2.new(0, 660, 0, 48)}, 0.28, Enum.EasingStyle.Quart)
 		else
 			Tween(Main, {Size = UDim2.new(0, 660, 0, 460)}, 0.32, Enum.EasingStyle.Back)
 		end
 	end)
-	local CloseBtn = MakeCtrlBtn(-30, Color3.fromRGB(160, 30, 30))
-	-- Draw X with two frames instead of text
-	local XLine1 = Instance.new("Frame")
-	XLine1.Parent = CloseBtn
-	XLine1.BackgroundColor3 = Color3.fromRGB(210, 80, 80)
-	XLine1.BorderSizePixel = 0
-	XLine1.AnchorPoint = Vector2.new(0.5, 0.5)
-	XLine1.Position = UDim2.new(0.5, 0, 0.5, 0)
-	XLine1.Size = UDim2.new(0, 12, 0, 1.5)
-	XLine1.Rotation = 45
-	XLine1.ZIndex = 13
-	local XLineC1 = Instance.new("UICorner")
-	XLineC1.CornerRadius = UDim.new(1, 0)
-	XLineC1.Parent = XLine1
-	local XLine2 = Instance.new("Frame")
-	XLine2.Parent = CloseBtn
-	XLine2.BackgroundColor3 = Color3.fromRGB(210, 80, 80)
-	XLine2.BorderSizePixel = 0
-	XLine2.AnchorPoint = Vector2.new(0.5, 0.5)
-	XLine2.Position = UDim2.new(0.5, 0, 0.5, 0)
-	XLine2.Size = UDim2.new(0, 12, 0, 1.5)
-	XLine2.Rotation = -45
-	XLine2.ZIndex = 13
-	local XLineC2 = Instance.new("UICorner")
-	XLineC2.CornerRadius = UDim.new(1, 0)
-	XLineC2.Parent = XLine2
+	local CloseBtn = MakeCtrlBtn(-28, Color3.fromRGB(155, 28, 28))
+	-- X icon: two diagonal frames
+	local XA = Instance.new("Frame")
+	XA.Parent = CloseBtn
+	XA.BackgroundColor3 = Color3.fromRGB(200, 70, 70)
+	XA.BorderSizePixel = 0
+	XA.AnchorPoint = Vector2.new(0.5, 0.5)
+	XA.Position = UDim2.new(0.5, 0, 0.5, 0)
+	XA.Size = UDim2.new(0, 11, 0, 1)
+	XA.Rotation = 45
+	XA.ZIndex = 13
+	local XAC = Instance.new("UICorner")
+	XAC.CornerRadius = UDim.new(1, 0)
+	XAC.Parent = XA
+	local XB = Instance.new("Frame")
+	XB.Parent = CloseBtn
+	XB.BackgroundColor3 = Color3.fromRGB(200, 70, 70)
+	XB.BorderSizePixel = 0
+	XB.AnchorPoint = Vector2.new(0.5, 0.5)
+	XB.Position = UDim2.new(0.5, 0, 0.5, 0)
+	XB.Size = UDim2.new(0, 11, 0, 1)
+	XB.Rotation = -45
+	XB.ZIndex = 13
+	local XBC = Instance.new("UICorner")
+	XBC.CornerRadius = UDim.new(1, 0)
+	XBC.Parent = XB
 	CloseBtn.MouseEnter:Connect(function()
-		Tween(XLine1, {BackgroundColor3 = Color3.fromRGB(255, 100, 100)}, 0.12)
-		Tween(XLine2, {BackgroundColor3 = Color3.fromRGB(255, 100, 100)}, 0.12)
+		Tween(XA, {BackgroundColor3 = Color3.fromRGB(255, 100, 100)}, 0.12)
+		Tween(XB, {BackgroundColor3 = Color3.fromRGB(255, 100, 100)}, 0.12)
 	end)
 	CloseBtn.MouseLeave:Connect(function()
-		Tween(XLine1, {BackgroundColor3 = Color3.fromRGB(210, 80, 80)}, 0.12)
-		Tween(XLine2, {BackgroundColor3 = Color3.fromRGB(210, 80, 80)}, 0.12)
+		Tween(XA, {BackgroundColor3 = Color3.fromRGB(200, 70, 70)}, 0.12)
+		Tween(XB, {BackgroundColor3 = Color3.fromRGB(200, 70, 70)}, 0.12)
 	end)
 	CloseBtn.MouseButton1Click:Connect(function()
-		Tween(Main, {BackgroundTransparency = 1, Position = UDim2.new(0.5, -330, 0.5, -220)}, 0.22, Enum.EasingStyle.Quart)
-		Tween(MainStroke, {Transparency = 1}, 0.22)
-		wait(0.25)
+		Tween(Main, {BackgroundTransparency = 1, Position = UDim2.new(0.5, -330, 0.5, -215)}, 0.25, Enum.EasingStyle.Quart)
+		Tween(MainStroke, {Transparency = 1}, 0.25)
+		wait(0.28)
 		ScreenGui:Destroy()
 	end)
-	-- Sidebar
+	-- ── Body ───────────────────────────────────────────────────────
+	local Body = Instance.new("Frame")
+	Body.Name = "Body"
+	Body.Parent = Main
+	Body.BackgroundTransparency = 1
+	Body.BorderSizePixel = 0
+	Body.Position = UDim2.new(0, 0, 0, 48)
+	Body.Size = UDim2.new(1, 0, 1, -48)
+	-- ── Sidebar ────────────────────────────────────────────────────
 	local Sidebar = Instance.new("Frame")
 	Sidebar.Name = "Sidebar"
-	Sidebar.Parent = Main
+	Sidebar.Parent = Body
 	Sidebar.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 	Sidebar.BorderSizePixel = 0
-	Sidebar.Position = UDim2.new(0, 0, 0, 46)
-	Sidebar.Size = UDim2.new(0, 175, 1, -46)
+	Sidebar.Size = UDim2.new(0, 168, 1, 0)
 	Sidebar.ZIndex = 2
 	local SidebarSep = Instance.new("Frame")
 	SidebarSep.Parent = Sidebar
@@ -283,86 +306,51 @@ function BinaryUI.CreateLib(libraryName, themeList)
 	SidebarSep.Position = UDim2.new(1, -1, 0, 0)
 	SidebarSep.Size = UDim2.new(0, 1, 1, 0)
 	SidebarSep.ZIndex = 3
-	-- Mascot panel fixed at bottom
-	local MascotPanel = Instance.new("Frame")
-	MascotPanel.Name = "MascotPanel"
-	MascotPanel.Parent = Main
-	MascotPanel.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-	MascotPanel.BorderSizePixel = 0
-	MascotPanel.Position = UDim2.new(0, 0, 1, -100)
-	MascotPanel.Size = UDim2.new(0, 175, 0, 100)
-	MascotPanel.ZIndex = 8
-	MascotPanel.ClipsDescendants = true
-	local MascotTopLine = Instance.new("Frame")
-	MascotTopLine.Parent = MascotPanel
-	MascotTopLine.BackgroundColor3 = themeList.BorderDim
-	MascotTopLine.BorderSizePixel = 0
-	MascotTopLine.Size = UDim2.new(1, 0, 0, 1)
-	MascotTopLine.ZIndex = 9
-	local MascotRightLine = Instance.new("Frame")
-	MascotRightLine.Parent = MascotPanel
-	MascotRightLine.BackgroundColor3 = themeList.BorderDim
-	MascotRightLine.BorderSizePixel = 0
-	MascotRightLine.Position = UDim2.new(1, -1, 0, 0)
-	MascotRightLine.Size = UDim2.new(0, 1, 1, 0)
-	MascotRightLine.ZIndex = 9
-	local MascotImg = Instance.new("ImageLabel")
-	MascotImg.Parent = MascotPanel
-	MascotImg.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-	MascotImg.BackgroundTransparency = 0
-	MascotImg.BorderSizePixel = 0
-	MascotImg.AnchorPoint = Vector2.new(0.5, 0)
-	MascotImg.Position = UDim2.new(0.5, 0, 0, 2)
-	MascotImg.Size = UDim2.new(0, 90, 0, 96)
-	MascotImg.Image = "rbxassetid://125348433159932"
-	MascotImg.ScaleType = Enum.ScaleType.Fit
-	MascotImg.ZIndex = 10
-	-- Tab scrolling area
 	local TabScroll = Instance.new("ScrollingFrame")
 	TabScroll.Parent = Sidebar
 	TabScroll.BackgroundTransparency = 1
 	TabScroll.BorderSizePixel = 0
-	TabScroll.Position = UDim2.new(0, 0, 0, 8)
-	TabScroll.Size = UDim2.new(1, 0, 1, -16)
+	TabScroll.Position = UDim2.new(0, 0, 0, 10)
+	TabScroll.Size = UDim2.new(1, 0, 1, -10)
 	TabScroll.ScrollBarThickness = 0
 	TabScroll.CanvasSize = UDim2.new(0, 0, 0, 0)
 	TabScroll.ScrollingDirection = Enum.ScrollingDirection.Y
 	TabScroll.ZIndex = 3
-	local TabListLayout = Instance.new("UIListLayout")
-	TabListLayout.Parent = TabScroll
-	TabListLayout.SortOrder = Enum.SortOrder.LayoutOrder
-	TabListLayout.Padding = UDim.new(0, 2)
 	local TabPad = Instance.new("UIPadding")
 	TabPad.Parent = TabScroll
 	TabPad.PaddingLeft = UDim.new(0, 8)
 	TabPad.PaddingRight = UDim.new(0, 8)
-	TabPad.PaddingTop = UDim.new(0, 4)
+	TabPad.PaddingTop = UDim.new(0, 2)
+	local TabListLayout = Instance.new("UIListLayout")
+	TabListLayout.Parent = TabScroll
+	TabListLayout.SortOrder = Enum.SortOrder.LayoutOrder
+	TabListLayout.Padding = UDim.new(0, 3)
 	TabListLayout:GetPropertyChangedSignal("AbsoluteContentSize"):Connect(function()
-		TabScroll.CanvasSize = UDim2.new(0, 0, 0, TabListLayout.AbsoluteContentSize.Y + 10)
+		TabScroll.CanvasSize = UDim2.new(0, 0, 0, TabListLayout.AbsoluteContentSize.Y + 12)
 	end)
-	-- Content panel
+	-- ── Content area ───────────────────────────────────────────────
 	local ContentPanel = Instance.new("Frame")
-	ContentPanel.Name = "Content"
-	ContentPanel.Parent = Main
+	ContentPanel.Name = "ContentPanel"
+	ContentPanel.Parent = Body
 	ContentPanel.BackgroundColor3 = themeList.Surface
 	ContentPanel.BorderSizePixel = 0
-	ContentPanel.Position = UDim2.new(0, 175, 0, 46)
-	ContentPanel.Size = UDim2.new(1, -175, 1, -46)
+	ContentPanel.Position = UDim2.new(0, 168, 0, 0)
+	ContentPanel.Size = UDim2.new(1, -168, 1, 0)
 	ContentPanel.ClipsDescendants = true
 	local Pages = Instance.new("Folder")
 	Pages.Name = "Pages"
 	Pages.Parent = ContentPanel
+	-- Theme ticker
 	coroutine.wrap(function()
 		while wait(0.6) do
 			Main.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 			Header.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 			Sidebar.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-			MascotPanel.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 			MascotImg.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 			ContentPanel.BackgroundColor3 = themeList.Surface
 			TitleLabel.TextColor3 = themeList.TextPrimary
 			MainStroke.Color = themeList.Border
-			HeaderLine.BackgroundColor3 = themeList.Border
+			HeaderAccent.BackgroundColor3 = themeList.Primary
 		end
 	end)()
 	function BinaryUI:ChangeColor(property, color)
@@ -374,6 +362,7 @@ function BinaryUI.CreateLib(libraryName, themeList)
 		elseif property == "TextAccent" then themeList.TextAccent = color
 		end
 	end
+	-- ══════════════════════════════════════════════════════════════
 	local Tabs = {}
 	local firstTab = true
 	local currentPage = nil
@@ -394,7 +383,7 @@ function BinaryUI.CreateLib(libraryName, themeList)
 		local PageLayout = Instance.new("UIListLayout")
 		PageLayout.Parent = Page
 		PageLayout.SortOrder = Enum.SortOrder.LayoutOrder
-		PageLayout.Padding = UDim.new(0, 8)
+		PageLayout.Padding = UDim.new(0, 7)
 		local PagePad = Instance.new("UIPadding")
 		PagePad.Parent = Page
 		PagePad.PaddingTop = UDim.new(0, 10)
@@ -405,13 +394,14 @@ function BinaryUI.CreateLib(libraryName, themeList)
 			local cs = PageLayout.AbsoluteContentSize
 			TweenService:Create(Page, TweenInfo.new(0.1), {CanvasSize = UDim2.new(0, 0, 0, cs.Y + 20)}):Play()
 		end
+		-- Tab button
 		local TabBtn = Instance.new("TextButton")
 		TabBtn.Name = tabName
 		TabBtn.Parent = TabScroll
 		TabBtn.BackgroundColor3 = themeList.Card
 		TabBtn.BackgroundTransparency = firstTab and 0 or 1
 		TabBtn.BorderSizePixel = 0
-		TabBtn.Size = UDim2.new(1, 0, 0, 34)
+		TabBtn.Size = UDim2.new(1, 0, 0, 36)
 		TabBtn.AutoButtonColor = false
 		TabBtn.Font = Enum.Font.GothamSemibold
 		TabBtn.Text = tabName
@@ -421,12 +411,13 @@ function BinaryUI.CreateLib(libraryName, themeList)
 		local TBC = Instance.new("UICorner")
 		TBC.CornerRadius = UDim.new(0, 6)
 		TBC.Parent = TabBtn
+		-- Left active bar
 		local TBBar = Instance.new("Frame")
 		TBBar.Parent = TabBtn
 		TBBar.BackgroundColor3 = themeList.Primary
 		TBBar.BorderSizePixel = 0
-		TBBar.Position = UDim2.new(0, 0, 0.15, 0)
-		TBBar.Size = UDim2.new(0, 2, 0.7, 0)
+		TBBar.Position = UDim2.new(0, 0, 0.18, 0)
+		TBBar.Size = UDim2.new(0, 2, 0.64, 0)
 		TBBar.BackgroundTransparency = firstTab and 0 or 1
 		TBBar.ZIndex = 5
 		local TBBC = Instance.new("UICorner")
@@ -440,10 +431,7 @@ function BinaryUI.CreateLib(libraryName, themeList)
 		end
 		local function SelectTab()
 			if currentPage == Page then return end
-			if currentPage then
-				local old = currentPage
-				old.Visible = false
-			end
+			if currentPage then currentPage.Visible = false end
 			for _, b in pairs(TabScroll:GetChildren()) do
 				if b:IsA("TextButton") then
 					Tween(b, {BackgroundTransparency = 1, TextColor3 = themeList.TabInactive}, 0.18)
@@ -451,7 +439,7 @@ function BinaryUI.CreateLib(libraryName, themeList)
 					if bar then Tween(bar, {BackgroundTransparency = 1}, 0.15) end
 				end
 			end
-			Tween(TabBtn, {BackgroundTransparency = 0, TextColor3 = themeList.TextAccent}, 0.18)
+			Tween(TabBtn, {BackgroundTransparency = 0, TextColor3 = themeList.TextAccent}, 0.2)
 			Tween(TBBar, {BackgroundTransparency = 0}, 0.15)
 			Page.Visible = true
 			currentPage = Page
@@ -460,7 +448,7 @@ function BinaryUI.CreateLib(libraryName, themeList)
 		TabBtn.MouseButton1Click:Connect(SelectTab)
 		TabBtn.MouseEnter:Connect(function()
 			if currentPage ~= Page then
-				Tween(TabBtn, {BackgroundTransparency = 0.7, TextColor3 = themeList.TextSecondary}, 0.12)
+				Tween(TabBtn, {BackgroundTransparency = 0.65, TextColor3 = themeList.TextSecondary}, 0.12)
 			end
 		end)
 		TabBtn.MouseLeave:Connect(function()
@@ -476,6 +464,7 @@ function BinaryUI.CreateLib(libraryName, themeList)
 				Page.ScrollBarImageColor3 = themeList.Primary
 			end
 		end)()
+		-- ════════════════════════════════════════════════════════════
 		local Sections = {}
 		function Sections:NewSection(sectionName, hidden)
 			sectionName = sectionName or "Section"
@@ -491,19 +480,19 @@ function BinaryUI.CreateLib(libraryName, themeList)
 			local SHead = Instance.new("Frame")
 			SHead.Parent = SFrame
 			SHead.BackgroundTransparency = 1
-			SHead.Size = UDim2.new(1, 0, 0, 18)
+			SHead.Size = UDim2.new(1, 0, 0, 16)
 			SHead.Visible = not hidden
 			local SLabel = Instance.new("TextLabel")
 			SLabel.Parent = SHead
 			SLabel.BackgroundTransparency = 1
-			SLabel.Position = UDim2.new(0, 6, 0, 0)
+			SLabel.Position = UDim2.new(0, 4, 0, 0)
 			SLabel.Size = UDim2.new(1, -8, 1, 0)
 			SLabel.Font = Enum.Font.GothamBold
 			SLabel.Text = sectionName:upper()
 			SLabel.TextColor3 = themeList.TextAccent
 			SLabel.TextSize = 10
 			SLabel.TextXAlignment = Enum.TextXAlignment.Left
-			SLabel.TextTransparency = 0.1
+			SLabel.TextTransparency = 0.05
 			local SContent = Instance.new("Frame")
 			SContent.Name = "Content"
 			SContent.Parent = SFrame
@@ -569,16 +558,16 @@ function BinaryUI.CreateLib(libraryName, themeList)
 				Btn.ZIndex = 2
 				Btn.MouseEnter:Connect(function()
 					Tween(Card, {BackgroundColor3 = themeList.CardHover}, 0.12)
-					Tween(CS, {Color = themeList.Border, Transparency = 0.5}, 0.12)
+					Tween(CS, {Color = themeList.Border, Transparency = 0.55}, 0.12)
 				end)
 				Btn.MouseLeave:Connect(function()
 					Tween(Card, {BackgroundColor3 = themeList.Card}, 0.12)
 					Tween(CS, {Color = themeList.BorderDim, Transparency = 0}, 0.12)
 				end)
 				Btn.MouseButton1Click:Connect(function()
-					Tween(Rip, {BackgroundTransparency = 0.85}, 0.06)
+					Tween(Rip, {BackgroundTransparency = 0.84}, 0.06)
 					wait(0.06)
-					Tween(Rip, {BackgroundTransparency = 1}, 0.2)
+					Tween(Rip, {BackgroundTransparency = 1}, 0.22)
 					callback()
 				end)
 				coroutine.wrap(function()
@@ -610,7 +599,7 @@ function BinaryUI.CreateLib(libraryName, themeList)
 				Lbl.TextXAlignment = Enum.TextXAlignment.Left
 				local Track = Instance.new("Frame")
 				Track.Parent = Card
-				Track.BackgroundColor3 = Color3.fromRGB(16, 20, 32)
+				Track.BackgroundColor3 = Color3.fromRGB(14, 18, 30)
 				Track.BorderSizePixel = 0
 				Track.Position = UDim2.new(1, -52, 0.5, -8)
 				Track.Size = UDim2.new(0, 40, 0, 16)
@@ -618,12 +607,12 @@ function BinaryUI.CreateLib(libraryName, themeList)
 				TC.CornerRadius = UDim.new(1, 0)
 				TC.Parent = Track
 				local TS = Instance.new("UIStroke")
-				TS.Color = Color3.fromRGB(38, 52, 78)
+				TS.Color = Color3.fromRGB(35, 50, 78)
 				TS.Thickness = 1
 				TS.Parent = Track
 				local Knob = Instance.new("Frame")
 				Knob.Parent = Track
-				Knob.BackgroundColor3 = Color3.fromRGB(90, 120, 165)
+				Knob.BackgroundColor3 = Color3.fromRGB(85, 115, 162)
 				Knob.BorderSizePixel = 0
 				Knob.Position = UDim2.new(0, 2, 0.5, -6)
 				Knob.Size = UDim2.new(0, 12, 0, 12)
@@ -639,21 +628,21 @@ function BinaryUI.CreateLib(libraryName, themeList)
 				HitBtn.MouseButton1Click:Connect(function()
 					toggled = not toggled
 					if toggled then
-						Tween(Knob, {Position = UDim2.new(1, -14, 0.5, -6), BackgroundColor3 = Color3.fromRGB(240, 248, 255)}, 0.18, Enum.EasingStyle.Back)
-						Tween(Track, {BackgroundColor3 = themeList.PrimaryDim}, 0.18)
-						Tween(TS, {Color = themeList.Primary}, 0.18)
-						Tween(Lbl, {TextColor3 = themeList.TextAccent}, 0.18)
+						Tween(Knob, {Position = UDim2.new(1, -14, 0.5, -6), BackgroundColor3 = Color3.fromRGB(238, 248, 255)}, 0.2, Enum.EasingStyle.Back)
+						Tween(Track, {BackgroundColor3 = themeList.PrimaryDim}, 0.2)
+						Tween(TS, {Color = themeList.Primary}, 0.2)
+						Tween(Lbl, {TextColor3 = themeList.TextAccent}, 0.2)
 					else
-						Tween(Knob, {Position = UDim2.new(0, 2, 0.5, -6), BackgroundColor3 = Color3.fromRGB(90, 120, 165)}, 0.18, Enum.EasingStyle.Back)
-						Tween(Track, {BackgroundColor3 = Color3.fromRGB(16, 20, 32)}, 0.18)
-						Tween(TS, {Color = Color3.fromRGB(38, 52, 78)}, 0.18)
-						Tween(Lbl, {TextColor3 = themeList.TextPrimary}, 0.18)
+						Tween(Knob, {Position = UDim2.new(0, 2, 0.5, -6), BackgroundColor3 = Color3.fromRGB(85, 115, 162)}, 0.2, Enum.EasingStyle.Back)
+						Tween(Track, {BackgroundColor3 = Color3.fromRGB(14, 18, 30)}, 0.2)
+						Tween(TS, {Color = Color3.fromRGB(35, 50, 78)}, 0.2)
+						Tween(Lbl, {TextColor3 = themeList.TextPrimary}, 0.2)
 					end
 					callback(toggled)
 				end)
 				HitBtn.MouseEnter:Connect(function()
 					Tween(Card, {BackgroundColor3 = themeList.CardHover}, 0.12)
-					Tween(CS, {Color = themeList.Border, Transparency = 0.5}, 0.12)
+					Tween(CS, {Color = themeList.Border, Transparency = 0.55}, 0.12)
 				end)
 				HitBtn.MouseLeave:Connect(function()
 					Tween(Card, {BackgroundColor3 = themeList.Card}, 0.12)
@@ -674,15 +663,15 @@ function BinaryUI.CreateLib(libraryName, themeList)
 						toggled = state
 						if toggled then
 							Knob.Position = UDim2.new(1, -14, 0.5, -6)
-							Knob.BackgroundColor3 = Color3.fromRGB(240, 248, 255)
+							Knob.BackgroundColor3 = Color3.fromRGB(238, 248, 255)
 							Track.BackgroundColor3 = themeList.PrimaryDim
 							TS.Color = themeList.Primary
 							Lbl.TextColor3 = themeList.TextAccent
 						else
 							Knob.Position = UDim2.new(0, 2, 0.5, -6)
-							Knob.BackgroundColor3 = Color3.fromRGB(90, 120, 165)
-							Track.BackgroundColor3 = Color3.fromRGB(16, 20, 32)
-							TS.Color = Color3.fromRGB(38, 52, 78)
+							Knob.BackgroundColor3 = Color3.fromRGB(85, 115, 162)
+							Track.BackgroundColor3 = Color3.fromRGB(14, 18, 30)
+							TS.Color = Color3.fromRGB(35, 50, 78)
 							Lbl.TextColor3 = themeList.TextPrimary
 						end
 						callback(toggled)
@@ -718,7 +707,7 @@ function BinaryUI.CreateLib(libraryName, themeList)
 				ValLbl.TextXAlignment = Enum.TextXAlignment.Right
 				local TrackBg = Instance.new("Frame")
 				TrackBg.Parent = Card
-				TrackBg.BackgroundColor3 = Color3.fromRGB(14, 18, 30)
+				TrackBg.BackgroundColor3 = Color3.fromRGB(12, 17, 28)
 				TrackBg.BorderSizePixel = 0
 				TrackBg.Position = UDim2.new(0, 14, 1, -18)
 				TrackBg.Size = UDim2.new(1, -28, 0, 5)
@@ -767,7 +756,7 @@ function BinaryUI.CreateLib(libraryName, themeList)
 				end)
 				Card.MouseEnter:Connect(function()
 					Tween(Card, {BackgroundColor3 = themeList.CardHover}, 0.12)
-					Tween(CS, {Color = themeList.Border, Transparency = 0.5}, 0.12)
+					Tween(CS, {Color = themeList.Border, Transparency = 0.55}, 0.12)
 				end)
 				Card.MouseLeave:Connect(function()
 					Tween(Card, {BackgroundColor3 = themeList.Card}, 0.12)
@@ -832,7 +821,7 @@ function BinaryUI.CreateLib(libraryName, themeList)
 				end)
 				Card.MouseEnter:Connect(function()
 					Tween(Card, {BackgroundColor3 = themeList.CardHover}, 0.12)
-					Tween(CS, {Color = themeList.Border, Transparency = 0.5}, 0.12)
+					Tween(CS, {Color = themeList.Border, Transparency = 0.55}, 0.12)
 				end)
 				Card.MouseLeave:Connect(function()
 					Tween(Card, {BackgroundColor3 = themeList.Card}, 0.12)
@@ -948,7 +937,7 @@ function BinaryUI.CreateLib(libraryName, themeList)
 					Opt.Name = "Option"
 					Opt.Parent = DropWrap
 					Opt.BackgroundColor3 = themeList.Card
-					Opt.BackgroundTransparency = 0.3
+					Opt.BackgroundTransparency = 0.25
 					Opt.BorderSizePixel = 0
 					Opt.Size = UDim2.new(1, 0, 0, 32)
 					Opt.AutoButtonColor = false
@@ -963,7 +952,7 @@ function BinaryUI.CreateLib(libraryName, themeList)
 					local OS = Instance.new("UIStroke")
 					OS.Color = themeList.BorderDim
 					OS.Thickness = 1
-					OS.Transparency = 0.5
+					OS.Transparency = 0.4
 					OS.Parent = Opt
 					Opt.MouseButton1Click:Connect(function()
 						DLbl.Text = option
@@ -976,11 +965,11 @@ function BinaryUI.CreateLib(libraryName, themeList)
 					end)
 					Opt.MouseEnter:Connect(function()
 						Tween(Opt, {BackgroundTransparency = 0, TextColor3 = themeList.TextAccent}, 0.1)
-						Tween(OS, {Color = themeList.Border, Transparency = 0.4}, 0.1)
+						Tween(OS, {Color = themeList.Border, Transparency = 0.35}, 0.1)
 					end)
 					Opt.MouseLeave:Connect(function()
-						Tween(Opt, {BackgroundTransparency = 0.3, TextColor3 = themeList.TextSecondary}, 0.1)
-						Tween(OS, {Color = themeList.BorderDim, Transparency = 0.5}, 0.1)
+						Tween(Opt, {BackgroundTransparency = 0.25, TextColor3 = themeList.TextSecondary}, 0.1)
+						Tween(OS, {Color = themeList.BorderDim, Transparency = 0.4}, 0.1)
 					end)
 					coroutine.wrap(function()
 						while wait(0.6) do
@@ -1008,7 +997,7 @@ function BinaryUI.CreateLib(libraryName, themeList)
 						Opt.Name = "Option"
 						Opt.Parent = DropWrap
 						Opt.BackgroundColor3 = themeList.Card
-						Opt.BackgroundTransparency = 0.3
+						Opt.BackgroundTransparency = 0.25
 						Opt.BorderSizePixel = 0
 						Opt.Size = UDim2.new(1, 0, 0, 32)
 						Opt.AutoButtonColor = false
@@ -1032,7 +1021,7 @@ function BinaryUI.CreateLib(libraryName, themeList)
 							Tween(Opt, {BackgroundTransparency = 0, TextColor3 = themeList.TextAccent}, 0.1)
 						end)
 						Opt.MouseLeave:Connect(function()
-							Tween(Opt, {BackgroundTransparency = 0.3, TextColor3 = themeList.TextSecondary}, 0.1)
+							Tween(Opt, {BackgroundTransparency = 0.25, TextColor3 = themeList.TextSecondary}, 0.1)
 						end)
 					end
 					if opened then DropWrap.Size = UDim2.new(1, 0, 0, DLayout.AbsoluteContentSize.Y) end
