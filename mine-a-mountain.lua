@@ -51,8 +51,8 @@ Rayfield.Notify = function(self, tbl)
 end
 
 local Window = Rayfield:CreateWindow({
-    Name = "Mine a Mountain",
-    LoadingTitle = "Mine a Mountain",
+    Name = "Mine a Mountain by proohio",
+    LoadingTitle = "Mine a Mountain by proohio",
     LoadingSubtitle = "by proohio",
     Theme = "Default",
     DisableRayfieldPrompts = false,
